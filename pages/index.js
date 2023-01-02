@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import First from 'components/home/section/first_section';
+import First from 'components/home/section/First_Section';
 import CompletePackage from 'components/home/section/CompletePackage_Section';
 import Portofolio from 'components/home/section/Portofolio_Section';
 import Testimonial from 'components/home/section/Testimonial_Section';
