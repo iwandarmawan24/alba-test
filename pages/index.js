@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import First from 'components/home/section/first_section';
-import Complete_Package from 'components/home/section/CompletePackage_Section';
+import CompletePackage from 'components/home/section/CompletePackage_Section';
 import Portofolio from 'components/home/section/Portofolio_Section';
 import Testimonial from 'components/home/section/Testimonial_Section';
 
@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <First />
-      <Complete_Package />
+      <CompletePackage />
       <Portofolio />
       <Testimonial />
     </div>

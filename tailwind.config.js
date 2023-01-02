@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     fontSize: {
@@ -18,6 +18,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
+    // eslint-disable-next-line global-require
     require('@tailwindcss/line-clamp'),
   ],
-}
+};
