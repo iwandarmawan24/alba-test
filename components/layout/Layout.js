@@ -5,10 +5,10 @@ import MENU_DATA from 'utils/MENU_DATA';
 
 const Layout = ({ children }) => {
     return (
-        <div>
-            <Navbar menuData={MENU_DATA}/>
+        <>
+            <Navbar menuData={MENU_DATA} />
             {children}
-        </div>
+        </>
     )
 };
 

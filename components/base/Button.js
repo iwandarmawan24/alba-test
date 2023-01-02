@@ -1,12 +1,12 @@
 import React from 'react';
 import { string, func } from 'prop-types';
 
-const Button = ({ text, onClick, className }) => {
+const Button = ({ text, onClick, className }) => {  
   return (
     <button type="button" onClick={onClick}
       className={`${className} bg-yellow-400 
-      text-black font-semibold 
-      py-1 p-4 rounded-full cursor-pointer`}
+      text-black font-bold text-xsm
+      py-2 p-4 rounded-full cursor-pointer min-w-[150px]`}
     >
       {text}
     </button>

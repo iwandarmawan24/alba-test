@@ -22,16 +22,18 @@ const Navbar = ({ menuData }) => {
                     </div>
                     <div className="max-md:hidden md:flex flex-row items-center justify-around w-[600px]">
                         {
-                            menuData.map((data, index) => <>
+                            menuData.map((data, index) => <div key={`${data.slug}-${index}-lg`} className="w-full">
                                 {
-                                    data.type === "link" ? <p key={`${data.slug}-${index}`} className="w-full font-semibold text-center">{data.title}</p>
+                                    data.type === "link" ?
+                                        <p className="w-full font-semibold text-center">{data.title}</p>
                                         : ""
                                 }
                                 {
-                                    data.type === "button" ? <Button key={`${data.slug}-${index}`} className="w-full" text={data.title} />
+                                    data.type === "button" ? <Button key={`${data.slug}-${index}-lg`} className="w-full" text={data.title} />
                                         : ""
                                 }
-                            </>)
+                            </div>
+                            )
                         }
                     </div>
                     <HamburgerButton onClick={() => setShowHamburgerMenu(!showHamburgerMenu)} />
@@ -47,7 +49,7 @@ const Navbar = ({ menuData }) => {
                                         : ""
                                 }
                                 {
-                                    data.type === "button" ? <Button key={`${data.slug}-${index}-md mb-4`} text={data.title} />
+                                    data.type === "button" ? <Button key={`${data.slug}-${index}-md`} className="mb-4" text={data.title} />
                                         : ""
                                 }
                             </>)
