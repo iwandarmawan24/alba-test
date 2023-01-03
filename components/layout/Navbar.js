@@ -27,7 +27,7 @@ const Navbar = ({ menuData }) => {
 
   useEffect(() => {
     if (router.pathname === '/') {
-      if (router.query) {
+      if (router.query.section) {
         scrollToHandler(router.query.section);
       }
     }
