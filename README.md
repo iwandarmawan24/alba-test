@@ -2,7 +2,7 @@
 this repository is consider to Alba recuitment assignment, i didnt own any assets or design references.
 
 ## **Alba Test Assignment**
-Here is the feedback or results, of your assignment you can access the live demo here [enter link description here](https://sensational-beijinho-3cacac.netlify.app/).
+Here is the feedback or results, of your assignment you can access the live demo here [live demo](https://sensational-beijinho-3cacac.netlify.app/).
 **stack i used :** 
  - NextJs
  - Tailwindcss
