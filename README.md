@@ -2,7 +2,7 @@
 this repository is consider to Alba recuitment assignment, i didnt own any assets or design references.
 
 ## **Alba Test Assignment**
-Here is the feedback or results, of your assignment.
+Here is the feedback or results, of your assignment you can access the live demo here [enter link description here](https://sensational-beijinho-3cacac.netlify.app/).
 **stack i used :** 
  - NextJs
  - Tailwindcss
@@ -13,8 +13,6 @@ Here is the feedback or results, of your assignment.
 **Preview :**
 ![enter image description here](https://github.com/iwandarmawan24/alba-test/blob/main/chrome_VlPo9BCxiB.gif)
 its consists with someof section base on design the assignment gave
-
-
 **Login Preview:**
 ![enter image description here](https://github.com/iwandarmawan24/alba-test/blob/main/chrome_gTxxyYW4lT.gif)
 to show login modal you have to press "Book Now" button , and fill with
