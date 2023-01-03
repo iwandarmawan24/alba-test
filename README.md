@@ -13,6 +13,8 @@ Here is the feedback or results, of your assignment.
 **Preview :**
 ![enter image description here](https://github.com/iwandarmawan24/alba-test/blob/main/chrome_VlPo9BCxiB.gif)
 its consists with someof section base on design the assignment gave
+
+
 **Login Preview:**
 ![enter image description here](https://github.com/iwandarmawan24/alba-test/blob/main/chrome_gTxxyYW4lT.gif)
 to show login modal you have to press "Book Now" button , and fill with
