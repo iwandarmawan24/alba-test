@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Layout from 'components/layout/Layout';
 
 // eslint-disable-next-line react/prop-types
 export default function Profile() {
@@ -30,6 +31,7 @@ export default function Profile() {
   },
   ];
   return (
+    <Layout withFooter={false}>
         <div>
             <Head>
                 <title>Profile</title>
@@ -101,5 +103,6 @@ export default function Profile() {
                 </div>
             </div>
         </div>
+    </Layout>
   );
 }

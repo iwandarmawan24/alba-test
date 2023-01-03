@@ -19,6 +19,7 @@ const CompletePackage = () => {
         <SectionWrap
           sectionName="Complete Pakcage"
           sectionDesc="From product design software continous delivery"
+          sectionId="completepackage"
         >
             <>
                 <div className="w-full lg:container mx-auto px-4">

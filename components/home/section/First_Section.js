@@ -32,25 +32,30 @@ const First = () => {
 
   return (
     <>
-      <div className="h-[calc(100vh - 80px)] bg-white bg-[url('/assets/images/first-section-bg.png')]
-        bg-no-repeat bg-[right_30px] max-sm:bg-[length:500px] max-md:bg-[length:600px]
+      <div
+        className="h-[calc(100vh - 80px)] bg-white bg-[url('/assets/images/first-section-bg.png')]
+        bg-no-repeat bg-opacity-20 bg-[right_30px] max-sm:bg-[length:500px] max-md:bg-[length:600px]
         "
+        id="about"
       >
-        <div className="w-full py-32 lg:container mx-auto px-4 max-sm:pt-32 max-md:bg-[length:600px]">
-          <div className="py-2 px-1 bg-white max-w-[500px] border border-black">
-            <p className="max-sm:text-3xl sm:text-5xl font-bold whitespace-normal">Build or scale up</p>
-          </div>
-          <div className="px-1">
-            <p className="max-sm:text-3xl sm:text-5xl ">Your development team</p>
-          </div>
-          <div className="px-1">
-            <div>
-              <div />
-              <p className="mb-4 font-bold">in weeks, not months</p>
+        <div className="w-full bg-white bg-opacity-40">
+          <div className="w-full py-32 lg:container mx-auto px-4 max-sm:pt-32 max-md:bg-[length:600px]">
+            <div className="py-2 px-1 bg-white max-w-[500px] border border-black">
+              <p className="max-sm:text-3xl sm:text-5xl font-bold whitespace-normal">Build or scale up</p>
             </div>
-            <Button text="Book Now" onClick={() => setIsLoginForm(true)} />
+            <div className="px-1">
+              <p className="max-sm:text-3xl sm:text-5xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">Your development team</p>
+            </div>
+            <div className="px-1">
+              <div>
+                <div />
+                <p className="mb-4 font-bold drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">in weeks, not months</p>
+              </div>
+              <Button text="Book Now" onClick={() => setIsLoginForm(true)} />
+            </div>
           </div>
         </div>
+
       </div>
       {isLoginForm ? (
         <div className="w-[100vw] h-[100vh] fixed top-0 left-0 right-0 z-50 bg-black/50">

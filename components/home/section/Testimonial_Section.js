@@ -14,6 +14,7 @@ const Testimonial = () => (
     <SectionWrap
       sectionName="Testimonials"
       sectionDesc="What clients love in working with Albatech Team"
+      sectionId="testimonial"
     >
         <div className="w-full lg:container mx-auto px-4">
             <div className="my-8 h-[180px]">

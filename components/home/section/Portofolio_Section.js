@@ -8,6 +8,7 @@ const Portofolio = () => (
     <SectionWrap
       sectionName="Portfolio"
       sectionDesc="The software that we build takes our clients to the next level"
+      sectionId="portofolio"
     >
         <div className="w-full lg:container mx-auto px-4 pt-8">
             <div className="flex flex-row flex-wrap justify-between">

@@ -1,11 +1,37 @@
-import React, { useState } from 'react';
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState, useEffect } from 'react';
 import { arrayOf, shape, string } from 'prop-types';
 import Image from 'next/image';
 import Button from 'components/base/Button';
 import HamburgerButton from 'components/layout/HamburgerButton';
+import { useRouter } from 'next/router';
 
 const Navbar = ({ menuData }) => {
+  const router = useRouter();
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+
+  const scrollToHandler = (target) => {
+    const section = document.querySelector(`#${target}`);
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const handleClickMenu = (data) => {
+    if (router.pathname === '/') {
+      if (data.sectionId) {
+        scrollToHandler(data.sectionId);
+      }
+    } else {
+      router.push(`/${data.sectionId ? `?section=${data.sectionId}` : ''}`);
+    }
+  };
+
+  useEffect(() => {
+    if (router.pathname === '/') {
+      if (router.query) {
+        scrollToHandler(router.query.section);
+      }
+    }
+  }, []);
 
   return (
         <>
@@ -23,7 +49,7 @@ const Navbar = ({ menuData }) => {
                     <div className="max-md:hidden md:flex flex-row items-center justify-around w-[600px]">
                         {
                             menuData.map((data, index) => (
-                                <div key={`${data.slug}-${index}-lg`} className="w-full">
+                                <div key={`${data.slug}-${index}-lg`} className="w-full cursor-pointer" onClick={() => handleClickMenu(data)}>
                                     {
                                         data.type === 'link'
                                           ? <p className="w-full font-semibold text-center">{data.title}</p>
