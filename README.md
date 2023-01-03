@@ -19,7 +19,7 @@ to show login modal you have to press "Book Now" button , and fill with
 **"email": "eve.holt@reqres.in",
 "password": "bebas"**
 also there are some validation with the email and password.
-if you dont pass the validation yet **login** button cant be press to proceed.
+if you dont pass the validation yet **login** button cant be press to proceed to profile page to see the token there.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
