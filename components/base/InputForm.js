@@ -8,10 +8,6 @@ const InputForm = ({
   const [inputValue, setInputValue] = useState(value);
   const [error, setError] = useState(false);
 
-  useEffect(() => {
-    setInputValue(value);
-  }, []);
-
   const handleError = () => {
     if (inputValue !== '' && type === 'email') {
       const emailPattern = /\S+@\S+\.\S+/;
@@ -25,6 +21,11 @@ const InputForm = ({
     }
   };
 
+  useEffect(() => {
+    setInputValue(value);
+    handleError();
+  }, []);
+
   const handleChange = (e) => {
     setInputValue(e.target.value);
     onChange(e);
@@ -34,7 +35,7 @@ const InputForm = ({
   return (
         <div className="mb-2">
             <label
-              for={type}
+              htmlFor={name}
               className="block text-sm font-semibold text-gray-800"
             >
                 {label}

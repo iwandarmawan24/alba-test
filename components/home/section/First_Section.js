@@ -1,20 +1,33 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import Button from 'components/base/Button';
 import InputForm from 'components/base/InputForm';
+import axios from 'axios';
 
 const First = () => {
+  const router = useRouter();
   const [isLoginForm, setIsLoginForm] = useState(false);
-
   const [signInData, setSignInData] = useState({
-    email: '',
-    password: '',
+    email: 'eve.holt@reqres.in',
+    password: 'bebas',
   });
 
   const [isFormError, setIsFormError] = useState(true);
 
   const handlerChangeForm = (e) => {
     setSignInData({ ...signInData, [e.target.name]: e.target.value });
+  };
+
+  const onSubmit = async () => {
+    const post = { ...signInData };
+    try {
+      const res = await axios.post('https://reqres.in/api/login', post);
+      localStorage.setItem('token', JSON.stringify(res.data));
+      router.push('/profile');
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -61,6 +74,7 @@ const First = () => {
                     name="email"
                     onErrorHandler={(val) => setIsFormError(val)}
                     placeholder="fill ur email"
+                    value={signInData.email}
                   />
                   <InputForm
                     label="Password"
@@ -68,6 +82,7 @@ const First = () => {
                     onChange={(e) => handlerChangeForm(e)}
                     name="password"
                     placeholder="fill ur password"
+                    value={signInData.password}
                   />
 
                   <div className="mt-6">
@@ -75,6 +90,7 @@ const First = () => {
                       text="Login"
                       className="w-full tracking-wide transition-colors duration-200 hover:bg-yellow-200 focus:outline-none focus:bg-yyellow-200"
                       disabled={isFormError || signInData.password === ''}
+                      onClick={() => onSubmit()}
                     />
                   </div>
                 </form>
